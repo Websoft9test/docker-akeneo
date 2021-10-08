@@ -1,9 +1,10 @@
 {
-  "name": "template",
+  "name": "akeneo",
   "trademark": "ONLYOFFICE",
-  "installpath": "/data/wwwroot/onlyoffice",
-  "compose_file": "docker-compose-production.yml",
-  "env_file": ".env_all",
+  "installpath": "/data/wwwroot/akeneo",
+  "compose_file": "docker-compose.yml",
+  "fork_url": "https://github.com/akeneo/pim-community-dev.git",
+  "env_file": ".env",
   "requirements":{
     "cpu_arch": "Linux x86-64, ARM 32/64, Windows x86-64, IBM POWER8, x86/i686",
     "cpu": "2",
@@ -54,23 +55,6 @@
     {
       "cmd": "echo bbb"
     }
-  ],
-
-  "faqs": [
-    {
-      "question_cn": "问题1",
-      "answer_cn": "答案1",
-      "question_en": "question1",
-      "answer_en": "answer1"
-    },
-
-    {
-      "question_cn": "问题2",
-      "answer_cn": "答案2",
-      "question_en": "question2",
-      "answer_en": "answer2"
-    }
-
   ]
 
 }
