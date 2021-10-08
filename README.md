@@ -1,4 +1,4 @@
-# ONLYOFFICE on Docker
+# Akeneo on Docker
 
 ![](https://libs.websoft9.com/common/websott9-cloud-installer.png) 
 
@@ -10,7 +10,7 @@ This repository is an **Cloud Native solution** powered by [Websoft9](https://ww
 
 ## System Requirements
 
-The following are the minimal [recommended requirements](https://github.com/onlyoffice/docker#recommended-system-requirements):
+The following are the minimal [recommended requirements](https://github.com/akeneo/docker#recommended-system-requirements):
 
 * **OS**: Red Hat, CentOS, Debian, Ubuntu or other's Linux OS
 * **Public Cloud**: More than 20+ major Cloud such as AWS, Azure, Google Cloud, Alibaba Cloud, HUAWEIClOUD, Tencent Cloud
@@ -59,17 +59,13 @@ ln -sf /usr/local/bin/docker-compose  /usr/bin
 sudo systemctl start docker
 ```
 
-#### Install ONLYOFFICE
+#### Install Akeneo
 
 We assume that you are already familiar with Docker, and you can modify [docker-compose file](docker-compose.yml) by yourself
 
 ```
 git clone --depth=1 https://github.com/Websoft9/docker-akeneo
 cd docker-akeneo
-echo aaa  
-echo bbb  
-# .env file's [SITE_NAME] should  be changed to public IP or domain name to be accessed by Internet  
-# The default startup is erpnext12. If you want to run erpnext13, you only need to change ERPNEXT_VERSION/FRAPPE_VERSIO to V13  
 docker-compose -f docker-compose.yml  --env-file  .env up -d
 ```
 
@@ -99,15 +95,15 @@ By default, the available users are:
 
 | Service | Port | Use |  Necessity |
 | --- | --- | --- | --- |
-| onlyoffice-server | 9002 | Web-GUI database management tool | Y |
+| akeneo-server | 9002 | Web-GUI database management tool | Y |
 | phpmyadmin | 9090 | Web-GUI database management tool | Y |
 ## Documentation
 
-[ONLYOFFICE Administrator Guide](https://support.websoft9.com/docs/akeneo)
+[Akeneo Administrator Guide](https://support.websoft9.com/docs/akeneo)
 
 ## Enterprise Support
 
-If you want to get our Enterprise Support to ensure high availability of applications, you can subscribe our [ONLYOFFICE Enterprise Support](https://apps.websoft9.com/akeneo) 
+If you want to get our Enterprise Support to ensure high availability of applications, you can subscribe our [Akeneo Enterprise Support](https://apps.websoft9.com/akeneo) 
 
 What you get with a Enterprise Support subscription?
 

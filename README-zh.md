@@ -1,4 +1,4 @@
-# ONLYOFFICE on Docker
+# Akeneo on Docker
 
 ![](https://libs.websoft9.com/common/websoft9-cloud-installer.png) 
 
@@ -6,11 +6,11 @@
 
 [简体中文](/README-zh.md) | [English](/README.md) 
 
-本项目是由 [Websoft9](https://www.websoft9.com) 研发的 **云原生程序** ，大大简化 ONLYOFFICE 复杂的安装及配置。
+本项目是由 [Websoft9](https://www.websoft9.com) 研发的 **云原生程序** ，大大简化 Akeneo 复杂的安装及配置。
 
 ## 系统要求
 
-安装本项目，确保符合如下的条件（[详细参考](https://github.com/onlyoffice/docker#recommended-system-requirements)）：
+安装本项目，确保符合如下的条件（[详细参考](https://github.com/akeneo/docker#recommended-system-requirements)）：
 
 * **操作系统**: Red Hat, CentOS, Debian, Ubuntu 等主流 Linux等 操作系统
 * **公有云**: AWS, Azure, Google Cloud, 阿里云, 腾讯云, 华为云等20多个全球主流云
@@ -63,23 +63,19 @@ ln -sf /usr/local/bin/docker-compose  /usr/bin
 sudo systemctl start docker
 ```
 
-#### 安装 ONLYOFFICE
+#### 安装 Akeneo
 
 直接运行下面的命令快速安装应用。如果你熟悉 Docker，建议先修改 [docker-compose](docker-compose-production.yml) 文件以满足自己的需求
 
 ```
 git clone --depth=1 https://github.com/Websoft9/docker-akeneo
 cd docker-akeneo
-echo aaa  
-echo bbb  
-# .env文件的SITE_NAME需要修改成公网IP或者域名才能被外网访问  
-# 默认启动的是ERPNext12，如果您想运行ERPNext13,只需将ERPNEXT_VERSION、FRAPPE_VERSION修改成v13  
 sudo docker-compose -f docker-compose.yml --env-file .env up -d
 ```
 
 ### 常见问题
 
-#### 安装 ONLYOFFICE 前需要更改密码吗？
+#### 安装 Akeneo 前需要更改密码吗？
 
 是的, 在生产环境中，您应该在 docker-compose 文件中修改所有数据库密码和应用程序密码
 
@@ -106,15 +102,15 @@ sudo docker-compose -f docker-compose.yml --env-file .env up -d
 
 | 名称 | 端口号 | 用途 |  必要性 |
 | --- | --- | --- | --- |
-| onlyoffice-server | 9002 | 浏览器访问 ONLYOFFICE | Y |
+| akeneo-server | 9002 | 浏览器访问 Akeneo | Y |
 | phpmyadmin | 9090 | 数据库可视化管理工具 | Y |
 ## 文档
 
-[ONLYOFFICE 管理员手册](https://support.websoft9.com/docs/akeneo)
+[Akeneo 管理员手册](https://support.websoft9.com/docs/akeneo)
 
 ## 企业级支持
 
-如果需要企业级支持，请订阅我们提供的 [ONLYOFFICE 企业级支持版](https://apps.websoft9.com/akeneo) 
+如果需要企业级支持，请订阅我们提供的 [Akeneo 企业级支持版](https://apps.websoft9.com/akeneo) 
 
 订阅企业级产品后，您可获得：
 
