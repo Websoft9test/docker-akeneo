@@ -18,3 +18,20 @@
 * 安装 Akeneo，提取数据库连接和管理员账号的环境变量
 * Apache 日志转发到 docker logs
 * Apache 服务的健壮性研究
+
+## 疑难
+
+bin/console pim:install --force --symlink --clean --env=prod
+
+```
+
+In FixturePathProvider.php line 39:
+
+  Installer data directory cannot be found.
+
+
+The command terminated with an error code: 1.
+Error during PIM installation. The command terminated with an error code: 1.
+
+```
+

@@ -7,9 +7,15 @@ LABEL maintainer="help@websoft9.com"
 LABEL version="latest"
 LABEL description="Akeneo"
 
+ENV AKENEO_MYSQL_HOST=mysql
+ENV AKENEO_MYSQL_PORT=3306
+ENV AKENEO_MYSQL_USER=akeneo
+ENV AKENEO_MYSQL_PASSWORD=akeneo
+ENV AKENEO_MYSQL_DATABASE=akeneo
+ENV AKENEO_SITENAME=DiscuzQ
 
-RUN apt update -y && apt install apache2 -y
-RUN apt install apache2 -y
+
+RUN apt update -y && apt install apache2 unzip make -y
 RUN apt clean && rm -rf /var/lib/apt/lists/*
 RUN a2enmod rewrite proxy_fcgi actions alias expires headers ssl
 ADD 000-default.conf /etc/apache2/sites-available/000-default.conf
@@ -26,3 +32,7 @@ RUN chown -R www-data:www-data /var/www
 EXPOSE 80
 
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+
+NO_DOCKER=true make prod
+bin/console pim:install --force --symlink --clean --env=prod
+
