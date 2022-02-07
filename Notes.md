@@ -4,7 +4,7 @@
 
 ### 解读
 
-官方仅提供了定制的 PHP 镜像，其中仅包含了 php, php-cli, fpm, composer。  
+官方仅提供了定制的 [PHP 镜像](https://hub.docker.com/r/akeneo/pim-php-base)，其中仅包含了 php, php-cli, fpm, composer。  
 
 ### 镜像寻找
 
