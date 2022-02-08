@@ -2,11 +2,11 @@
 
 # replace Akeneo env
 cp /var/www/html/.env  /var/www/html/.env.local
-sed -i "s/APP_DATABASE_HOST=*/APP_DATABASE_HOST=$AKENEO_MYSQL_HOST/"  /var/www/html/.env.local
-sed -i "s/APP_DATABASE_PORT=*/APP_DATABASE_PORT=$AKENEO_MYSQL_PORT/"  /var/www/html/.env.local
-sed -i "s/APP_DATABASE_NAME=*/APP_DATABASE_NAME=$AKENEO_MYSQL_HOST/"  /var/www/html/.env.local
-sed -i "s/APP_DATABASE_USER=*/APP_DATABASE_USER=$AKENEO_MYSQL_USER/"  /var/www/html/.env.local
-sed -i "s/APP_DATABASE_PASSWORD=*/APP_DATABASE_PASSWORD=$AKENEO_MYSQL_PASSWORD/"  /var/www/html/.env.local
+sed -i "s/APP_DATABASE_HOST=.*/APP_DATABASE_HOST=$AKENEO_MYSQL_HOST/g"  /var/www/html/.env.local
+sed -i "s/APP_DATABASE_PORT=.*/APP_DATABASE_PORT=$AKENEO_MYSQL_PORT/g"  /var/www/html/.env.local
+sed -i "s/APP_DATABASE_NAME=.*/APP_DATABASE_NAME=$AKENEO_MYSQL_DATABASE/g"  /var/www/html/.env.local
+sed -i "s/APP_DATABASE_USER=.*/APP_DATABASE_USER=$AKENEO_MYSQL_USER/g"  /var/www/html/.env.local
+sed -i "s/APP_DATABASE_PASSWORD=.*/APP_DATABASE_PASSWORD=$AKENEO_MYSQL_PASSWORD/g"  /var/www/html/.env.local
 
 # replace php.ini and fpm vars
 sed -i "s/memory_limit = 128M/memory_limit = 512M/"  /etc/php/7.4/fpm/php.ini
