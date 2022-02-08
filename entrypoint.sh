@@ -16,7 +16,7 @@ sed -i "s/listen = 9000/listen = \/run\/php\/php7.4-fpm.sock/"  /etc/php/7.4/fpm
 cd /var/www/html && NO_DOCKER=true make prod 
 chown -R www-data:www-data /var/www/html
 
-# create administrator user
+# create administrator credential
 bin/console pim:user:create $AKENEO_ADMIN_USER $AKENEO_ADMIN_PASSWORD support@example.com Admin Admin en_US --admin -n --env=prod
 
 # Add local user
