@@ -3,7 +3,7 @@
 cd /var/www/html && NO_DOCKER=true make prod
 
 # replace Akeneo env
-cp /var/www/html/pim/.env  /var/www/html/pim/.env.local
+cp /var/www/html/.env  /var/www/html/.env.local
 sed -i "s/APP_DATABASE_HOST=*/APP_DATABASE_HOST=$DISCUZQ_MYSQL_HOST/"  /var/www/html/.env.local
 sed -i "s/APP_DATABASE_PORT=*/APP_DATABASE_PORT=$DISCUZQ_MYSQL_PORT/"  /var/www/html/.env.local
 sed -i "s/APP_DATABASE_NAME=*/AKENEO_MYSQL_DATABASE=$DISCUZQ_MYSQL_HOST/"  /var/www/html/.env.local
