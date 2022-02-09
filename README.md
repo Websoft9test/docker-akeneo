@@ -15,7 +15,7 @@ The following are the minimal [recommended requirements](https://github.com/aken
 * **OS**: Red Hat, CentOS, Debian, Ubuntu or other's Linux OS
 * **Public Cloud**: More than 20+ major Cloud such as AWS, Azure, Google Cloud, Alibaba Cloud, HUAWEIClOUD, Tencent Cloud
 * **Private Cloud**: KVM, VMware, VirtualBox, OpenStack
-* **ARCH**:  Linux x86-64, ARM 32/64, Windows x86-64, IBM POWER8, x86/i686
+* **ARCH**:  Linux x86-64, ARM 32/64, x86/i686
 * **RAM**: 4 GB or more
 * **CPU**: 2 cores or higher
 * **HDD**: at least 20 GB of free space
@@ -79,7 +79,7 @@ You should modify ports at [docker-compose file](docker-compose-production.yml) 
 
 ### Usage instructions
 
-You can point your browser to: *`http://Instance's Internet IP:9002`*  
+You can point your browser to: *`http://Instance's Internet IP:9001`*  
 
 The following is the information that may be needed during use
 
@@ -89,14 +89,13 @@ By default, the available users are:
 
 | Username    | Password |
 | ------- | -------- |
-|  admin | 123456  |
+|  admin | admin  |
 
 #### Services and Ports
 
 | Service | Port | Use |  Necessity |
 | --- | --- | --- | --- |
-| akeneo-server | 9002 | Web-GUI database management tool | Y |
-| phpmyadmin | 9090 | Web-GUI database management tool | Y |
+| akeneo | 9001 | Browser access to Akeneo | Y |
 ## Documentation
 
 [Akeneo Administrator Guide](https://support.websoft9.com/docs/akeneo)

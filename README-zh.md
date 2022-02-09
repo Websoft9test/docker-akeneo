@@ -15,7 +15,7 @@
 * **操作系统**: Red Hat, CentOS, Debian, Ubuntu 等主流 Linux等 操作系统
 * **公有云**: AWS, Azure, Google Cloud, 阿里云, 腾讯云, 华为云等20多个全球主流云
 * **私有云**: KVM, VMware, VirtualBox, OpenStack 等主流虚拟化架构
-* **CPU架构**: Linux x86-64, ARM 32/64, Windows x86-64, IBM POWER8, x86/i686
+* **CPU架构**: Linux x86-64, ARM 32/64, x86/i686
 * **内存**: 4GB以上
 * **CPU**: 2核以上
 * **存储**: 20GB以上
@@ -86,7 +86,7 @@ sudo docker-compose up -d
 
 ### 使用说明
 
-启动应用后，本地浏览器访问 URL: *`http://服务器公网IP:9002`* 进入应用。  
+启动应用后，本地浏览器访问 URL: *`http://服务器公网IP:9001`* 进入应用。  
 
 下面是使用过程中可能需要的信息
 
@@ -96,14 +96,13 @@ sudo docker-compose up -d
 
 | 用户名    | 密码 |
 | ------- | -------- |
-|  admin | 123456  |
+|  admin | admin  |
 
 #### 服务和端口
 
 | 名称 | 端口号 | 用途 |  必要性 |
 | --- | --- | --- | --- |
-| akeneo-server | 9002 | 浏览器访问 Akeneo | Y |
-| phpmyadmin | 9090 | 数据库可视化管理工具 | Y |
+| akeneo | 9001 | 浏览器访问 Akeneo | Y |
 ## 文档
 
 [Akeneo 管理员手册](https://support.websoft9.com/docs/akeneo)
