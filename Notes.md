@@ -39,3 +39,11 @@
 ```
 bin/console pim:user:create admin admin support@example.com Admin Admin en_US --admin -n --env=prod
 ```
+
+#### 初始化需要什么条件？
+
+需配置正确的数据库连接，否则无法完成初始化
+
+#### 容器初始化时间长吗？
+
+约5-8分钟，依赖 node 在线安装。国内服务器需考虑这个网络情况
