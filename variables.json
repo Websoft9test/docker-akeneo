@@ -24,7 +24,7 @@
       "name": "akeneo",
       "port": "9001",
       "description_cn": "浏览器访问 Akeneo",
-      "description_en": "Access to Akeneo",
+      "description_en": "Browser access to Akeneo",
       "required": "Y"
     }
   ]
