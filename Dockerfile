@@ -1,7 +1,7 @@
 # refer to: https://github.com/chandrantwins/akeneo-docker/blob/master/Dockerfile
 
 
-FROM akeneo/pim-php-base:master
+FROM akeneo/pim-php-dev:master
 
 LABEL maintainer="help@websoft9.com"
 LABEL version="latest"
@@ -27,9 +27,9 @@ ENTRYPOINT ["/entrypoint.sh"]
 
 RUN curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
 RUN bash nodesource_setup.sh && apt install nodejs && npm install -g yarn
-COPY --from=composer:2.1 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 RUN rm -rf /var/www/html/*
-RUN COMPOSER_MEMORY_LIMIT=-1 composer create-project akeneo/pim-community-standard /var/www/html "5.0.*@stable"
+RUN COMPOSER_MEMORY_LIMIT=-1 composer create-project akeneo/pim-community-standard /var/www/html
 
 WORKDIR /var/www/html
 RUN chown -R www-data:www-data /var/www/html
