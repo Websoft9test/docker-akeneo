@@ -27,7 +27,7 @@ ENTRYPOINT ["/entrypoint.sh"]
 
 RUN curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
 RUN bash nodesource_setup.sh && apt install nodejs && npm install -g yarn
-RUN wget https://getcomposer.org/composer-stable.phar -O composer.phar; chmod 750 composer.phar;  mv composer.phar /usr/local/bin/composer
+COPY --from=composer:2.1 /usr/bin/composer /usr/bin/composer
 RUN rm -rf /var/www/html/*
 RUN COMPOSER_MEMORY_LIMIT=-1 composer create-project akeneo/pim-community-standard /var/www/html "5.0.*@stable"
 
