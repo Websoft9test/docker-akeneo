@@ -2,6 +2,8 @@
 
 ## 安装
 
+先阅读官方文档：https://docs.akeneo.com/master/install_pim/docker/installation_docker.html
+
 ### 镜像寻找
 
 没有找到满足需求的镜像，故需研究安装方案。
