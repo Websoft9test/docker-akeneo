@@ -37,6 +37,7 @@ services:
   elasticsearch:
     image: 'docker.elastic.co/elasticsearch/elasticsearch-oss:${DB_ES_VERSION}'
     container_name: ${APP_NAME}-elasticsearch
+    restart: always
     environment:
       ES_JAVA_OPTS: '${ES_JAVA_OPTS:--Xms512m -Xmx512m}'
       discovery.type: 'single-node'
