@@ -2,6 +2,7 @@
 
 localexist=/var/www/html/.env.local
 if [ ! -e "$localexist" ]; then
+
     echo "file:.env.local isn't exist"
     
     # replace Akeneo env
