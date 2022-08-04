@@ -33,5 +33,5 @@ else
     echo "file:.env.local is exist."
 fi
 
-/etc/init.d/php7.4-fpm start
+/etc/init.d/php8.0-fpm start
 exec "$@"
