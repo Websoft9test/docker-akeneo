@@ -13,8 +13,8 @@ if [ ! -e "$localexist" ]; then
     sed -i "s/APP_DATABASE_PASSWORD=.*/APP_DATABASE_PASSWORD=$AKENEO_MYSQL_PASSWORD/g"  /var/www/html/.env.local
 
     # replace php.ini and fpm vars
-    sed -i "s/memory_limit = .*.M/memory_limit = 1024M/g"  /etc/php/7.4/fpm/php.ini
-    sed -i "s/listen = .*/listen = \/run\/php\/php7.4-fpm.sock/g"  /etc/php/7.4/fpm/pool.d/www.conf
+    sed -i "s/memory_limit = .*.M/memory_limit = 1024M/g"  /etc/php/8.0/fpm/php.ini
+    sed -i "s/listen = .*/listen = \/run\/php\/php7.4-fpm.sock/g"  /etc/php/8.0/fpm/pool.d/www.conf
 
     # to do: make prod  
     cd /var/www/html && NO_DOCKER=true make prod 
