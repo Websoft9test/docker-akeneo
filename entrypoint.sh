@@ -1,6 +1,6 @@
 #!/bin/bash
 
-localexist=/data/apps/bt/docker-akeneo/.env.local
+localexist=/var/www/html/.env.local
 if [ ! -e "$localexist" ]; then
     echo "file:.env.local isn't exist"
     
